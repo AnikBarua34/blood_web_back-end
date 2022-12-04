@@ -32,7 +32,7 @@ async function run() {
       res.json(result);
     });
     // get/add new register user to database
-    app.get("/allUsers", async (req, res) => {
+    app.get("/getAllUsers", async (req, res) => {
       const cursor = usersCollection.find({});
       const result = await cursor.toArray();
       res.send(result);
